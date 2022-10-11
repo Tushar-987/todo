@@ -12,7 +12,7 @@ func TestGetTodoById(t *testing.T) {
 	ts := utils.TestServer{Server: Server}
 
 	t.Run("Bad request with a non-existing todo", func(t *testing.T) {
-		statusCode, _, _ := ts.Get(t, "/todos/90", "")
+		statusCode, _, _ := ts.Get(t, "/todos/90")
 
 		if statusCode != http.StatusNotFound {
 			t.Errorf("want %d status code; got %d", http.StatusNotFound, statusCode)
@@ -20,7 +20,7 @@ func TestGetTodoById(t *testing.T) {
 	})
 
 	t.Run("Valid request", func(t *testing.T) {
-		statusCode, _, resBody := ts.Get(t, "/todos/1", "")
+		statusCode, _, resBody := ts.Get(t, "/todos/1")
 
 		if statusCode != http.StatusOK {
 			t.Errorf("want %d status code; got %d", http.StatusOK, statusCode)

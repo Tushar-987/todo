@@ -1,6 +1,12 @@
 package models
 
-import "database/sql"
+import (
+	"database/sql"
+
+	"github.com/Tushar-987/todo/cmd"
+	"github.com/Tushar-987/todo/utils"
+	_ "github.com/go-sql-driver/mysql"
+)
 
 //query := `
 //CREATE TABLE IF NOT EXISTS todo (
