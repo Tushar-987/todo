@@ -1,6 +1,11 @@
 package tests
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/Tushar-987/todo/cmd"
+	"github.com/Tushar-987/todo/utils"
+)
 
 func TestSeeder(t *testing.T) {
 	t.Run("Seed todos", func(t *testing.T) {
